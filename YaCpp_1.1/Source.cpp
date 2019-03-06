@@ -4,13 +4,19 @@ using namespace std;
 int stepic_reference();
 void stepic_swap(int * a, int * b);
 void stepic_arr();
+int max_element(int * m, int size);
+int * max_ref_element(int * m, int * q);
 
 int main() {
 	//stepic_reference();
 	/*int k = 10, m = 20;
 	stepic_swap(&k, &m);
 	cout << k << ' ' << m;*/
-	stepic_arr();
+	//stepic_arr();
+	int arr[11] = {12,22,3,4,5,6,7,8,9,10,45};
+	int *k = &arr[3];
+	//max_element(&arr[3], 9);
+	max_ref_element(arr, arr + 10);
 }
 
 int stepic_reference()
@@ -41,9 +47,27 @@ void stepic_arr()
 */
 	int n[15] = {};
 	for (int * p = n; p <= n + 9; ++p) {
-	
 		*p = (p - n) + 1;
 		cout << *p;
 
 	}
+}
+
+int max_element(int * m, int size)
+{
+	int max = *m;
+	for (int i = 1; i < size; ++i)
+		if (m[i] > max)
+			max = m[i];
+	return max;
+}
+
+int * max_ref_element(int * m, int * q)
+{
+	int * pmax = m;
+ 	for (; m != q; ++m)
+		if (*m > *pmax)
+			pmax = m;
+	cout << *pmax;
+	return pmax;
 }
