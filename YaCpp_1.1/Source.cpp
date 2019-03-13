@@ -19,7 +19,12 @@ int main() {
 	int * pmax = 0;
 	//max_element(&arr[3], 9);
 	//max_ref_element(arr, arr + 10);
-	max_ref_to_ref_element(arr, arr + 10, &pmax);
+	if(max_ref_to_ref_element(arr, arr + 10, &pmax))
+		cout << 'true';
+	else
+	{
+		cout << "false";
+	}
 }
 
 int stepic_reference()
