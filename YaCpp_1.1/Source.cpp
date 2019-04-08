@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "struct.h";
 using namespace std;
 int stepic_reference();
 void stepic_swap(int * a, int * b);
@@ -25,6 +25,15 @@ int main() {
 	{
 		cout << "false";
 	}
+
+	ivector3d iv3d = { {1,1,1} };
+	scale(iv3d, 2);
+	testPlusArr(&iv3d, 4);
+}
+
+void testPlusArr(ivector3d * v, int plus)
+{
+	v->plusArr(plus);
 }
 
 int stepic_reference()
