@@ -31,10 +31,7 @@ int main() {
 	testPlusArr(&iv3d, 4);
 }
 
-void testPlusArr(ivector3d * v, int plus)
-{
-	v->plusArr(plus);
-}
+
 
 int stepic_reference()
 {

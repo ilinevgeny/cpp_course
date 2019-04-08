@@ -30,6 +30,10 @@
 //{
 //	double dx = s->p1.x = s->p2.x;
 //}
+void ivector3d::plusArr(int k)
+{
+	this->arrElem[0] += k;
+}
 
 void scale(ivector3d v, int k)
 {
@@ -38,4 +42,8 @@ void scale(ivector3d v, int k)
 
 };
 
+void testPlusArr(ivector3d * v, int plus)
+{
+	v->plusArr(plus);
+}
 
