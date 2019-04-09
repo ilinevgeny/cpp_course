@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Source.cpp" />
+    <ClCompile Include="string.h" />
     <ClCompile Include="struct.cpp" />
   </ItemGroup>
   <ItemGroup>

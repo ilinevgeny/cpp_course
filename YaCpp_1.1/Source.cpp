@@ -1,5 +1,7 @@
 #include <iostream>
 #include "struct.h";
+#include "string.h";
+
 using namespace std;
 int stepic_reference();
 void stepic_swap(int * a, int * b);
@@ -9,6 +11,13 @@ int * max_ref_element(int * m, int * q);
 bool max_ref_to_ref_element(int * m, int * q, int ** res);
 
 int main() {
+
+	CppString cpps("tmystring11"); 
+	cout << cpps.str;
+	const char *str13 = "mystring1111";
+	cpps.str = (char*)str13;
+	cout << cpps.str;
+
 	//stepic_reference();
 	/*int k = 10, m = 20;
 	stepic_swap(&k, &m);
